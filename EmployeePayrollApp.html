@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="EmployeePayrollApp.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+   
     <title>Employee Payroll Form</title>
 </head>
 
@@ -21,6 +21,8 @@
             </div>
         </div>
     </header>
+    <div id="formId" class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
      <!-- Ability to create a Form Header and the Input Text Element for Name -->
      <div class="form-head">Employee Payroll form</div>
      <div class="row-content">
@@ -50,6 +52,37 @@
                 <img class="profile" id='image4' src="Ellipse -7.png"> 
             </label>
         </div>
+    </div>
+     <!-- Ability to specify the gender as radio button, department as checkbox and Salary as range indicator. -->
+     <div class="row-content">
+        <label class="label text" for="gender">Gender</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label class="text" for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label class="text" for="female">Female</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="department">Department</label>
+        <div>
+            <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+            <label class="text" for="hr">HR</label>
+            <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+            <label class="text" for="sales">Sales</label>
+            <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+            <label class="text" for="finance">Finance</label>
+            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+            <label class="text" for="engineer">Engineer</label>
+            <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+            <label class="text" for="others">Others</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="salary">Choose your salary: </label>
+        <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" 
+        step="100" value="400000">
+        <output class="salary—output text" for="salary">400000</output>
     </div>
 </body>
 </html>
